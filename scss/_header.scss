@@ -1,0 +1,123 @@
+/*=========  Header section ===============*/
+
+header {
+    background: url(../images/headerBackground.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .top-section__logo,
+    .top-section__menu {
+        display: inline-block;
+    }
+
+    .top-section__logo {
+        height: 37px;
+        line-height: 47px;
+        text-transform: uppercase;
+
+        h1 {
+            font-size: 18px;
+        }
+        a {
+            color: $white;
+        }
+    }
+
+    .top-section__menu {
+        height: 0;
+        overflow: hidden;
+        width: 200px;
+        line-height: 36px;
+        position: absolute;
+        top: 15px;
+        right: 0;
+        bottom: 0;
+
+
+        @media (min-width: 768px) {
+            position: relative;
+            background: transparent;
+            width: auto;
+            height: 36px;
+            line-height: 20px;
+            overflow: visible;
+        }
+
+        a {
+            color: $white;
+        }
+    }
+    .toogle-menu {
+        height: 336px;
+        @media (min-width: 768px) {
+            height: 0;
+        }
+    }
+
+    .bottom-section {
+        padding: 13% 0;
+
+        &__container {
+            h1,
+            p,
+            button {
+                margin-bottom: 20px;
+            }
+            h1 {
+                text-transform: uppercase;
+                font-family: $Montserrat-Bold;
+                font-size: 40px;
+            }
+            p {
+                color: $white;
+            }
+        }
+    }
+
+    .signup-link {
+        border-radius: 25px;
+        border: 1px solid $white;
+        padding: 5px 10px;
+
+        &:hover {
+            border-color: $pink;
+            color: $pink;
+        }
+    }
+}
+
+.list-inline {
+    li {
+        display: block;
+        margin-right: 20px;
+        text-align: right;
+
+        @media (min-width: 768px) {
+            display: inline-block;
+            margin-right: 25px;
+            text-align: left;
+        }
+    }
+}
+
+
+.mobile-menu {
+    width: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: $pink;
+    position: relative;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    span {
+        background: $white;
+        display: block;
+        margin-bottom: 3px;
+        height: 5px;
+    }
+}
