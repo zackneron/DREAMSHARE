@@ -12,6 +12,7 @@ section {
         margin-bottom: 30px;
     }
     &__button {
+        margin: 20px 0;
 
         @media (min-width: 992px) {
             margin-top: 30px;
@@ -88,14 +89,19 @@ section {
         display: flex;
         align-items: center;
     	justify-content: center;
+        @include transition(background, .5s, linear);
 
         &:hover {
             color: $dark_grey;
+            background: transparent;
         }
 
         span {
             font-family: $Roboto-bold;
             font-size: 20px;
+            @media (min-width: 500px) {
+                font-size: 30px;
+            }
         }
     }
     &__text {
@@ -140,14 +146,19 @@ section {
         display: flex;
         align-items: center;
   		justify-content: center;
+        @include transition(background, .5s, linear);
 
         &:hover {
             color: $dark_grey;
+            background: transparent;
         }
 
         span {
             font-family: $Roboto-bold;
             font-size: 20px;
+            @media (min-width: 500px) {
+                font-size: 30px;
+            }
         }
     }
     &__text {

@@ -69,10 +69,7 @@ ul {
     padding: 10px 20px;
     cursor: pointer;
 
-    -webkit-transition: all .5 linear;
-    -moz-transition: all .5 linear;
-    -ms-transition: all .5 linear;
-    transition: all .5 linear;
+    @include transition(all, .5s, linear);
 
     &:focus {
         outline: none;
@@ -129,4 +126,21 @@ ul {
 
 .display-block {
     display: block;
+}
+
+.mobile-scroll {
+    overflow-y: scroll;
+    height: 500px;
+
+    @media (min-width: 768px) {
+        height: auto;
+        overflow-y: auto;
+    }
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+.margin-bottom-10 {
+    margin-bottom: 10px;
 }

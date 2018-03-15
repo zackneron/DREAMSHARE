@@ -14,9 +14,19 @@ header {
         height: 37px;
         line-height: 47px;
         text-transform: uppercase;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: auto;
+        }
 
         h1 {
             font-size: 18px;
+            float: left;
+            @media (min-width: 768px) {
+                width: auto;
+                float: none;
+            }
         }
         a {
             color: $white;
@@ -29,9 +39,13 @@ header {
         width: 200px;
         line-height: 36px;
         position: absolute;
-        top: 15px;
         right: 0;
         bottom: 0;
+        @include transition(height, .5s, linear);
+
+        width: 100%;
+        background: rgba(0,0,0,.5);
+        top: 50px;
 
 
         @media (min-width: 768px) {
@@ -41,14 +55,22 @@ header {
             height: 36px;
             line-height: 20px;
             overflow: visible;
+            top: 15px;
         }
 
         a {
             color: $white;
         }
+
+        .list-inline {
+            margin-top: 20px;
+            @media (min-width: 768px) {
+                margin-top: 0;
+            }
+        }
     }
     .toogle-menu {
-        height: 336px;
+        height: 270px;
         @media (min-width: 768px) {
             height: 0;
         }
@@ -78,6 +100,7 @@ header {
         border-radius: 25px;
         border: 1px solid $white;
         padding: 5px 10px;
+        @include transition(color, .5s, linear);
 
         &:hover {
             border-color: $pink;
@@ -106,10 +129,15 @@ header {
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-    background: $pink;
     position: relative;
     margin-bottom: 20px;
+    float: right;
+    top: 10px;
 
+    &:hover span {
+            background: $pink;
+        }
+    
     @media (min-width: 768px) {
         display: none;
     }
@@ -119,5 +147,8 @@ header {
         display: block;
         margin-bottom: 3px;
         height: 5px;
+        @include transition(background, .3s, linear);
+
+        
     }
 }
